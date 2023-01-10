@@ -3,7 +3,6 @@ package com.and07.springbootjpapostgresql.service.impl;
 import com.and07.springbootjpapostgresql.dto.StoreDTO;
 import com.and07.springbootjpapostgresql.model.Merchant;
 import com.and07.springbootjpapostgresql.model.Store;
-import com.and07.springbootjpapostgresql.repositroy.MerchantRepository;
 import com.and07.springbootjpapostgresql.repositroy.StoreRepository;
 import com.and07.springbootjpapostgresql.service.MerchantService;
 import com.and07.springbootjpapostgresql.service.StoreService;

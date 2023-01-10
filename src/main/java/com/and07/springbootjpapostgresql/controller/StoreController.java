@@ -3,7 +3,6 @@ package com.and07.springbootjpapostgresql.controller;
 import com.and07.springbootjpapostgresql.dto.StoreDTO;
 import com.and07.springbootjpapostgresql.model.Store;
 import com.and07.springbootjpapostgresql.service.StoreService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,7 +22,6 @@ public class StoreController {
         Store result = storeService.addStore(merchantId, store);
         return storeService.mapToDto(result);
     }
-
 
 
 }

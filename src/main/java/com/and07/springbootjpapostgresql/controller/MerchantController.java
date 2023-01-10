@@ -4,7 +4,6 @@ package com.and07.springbootjpapostgresql.controller;
 import com.and07.springbootjpapostgresql.dto.MerchantDTO;
 import com.and07.springbootjpapostgresql.model.Merchant;
 import com.and07.springbootjpapostgresql.service.MerchantService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -32,7 +31,7 @@ public class MerchantController {
     }
 
     @PutMapping("/update/{id}")
-    public MerchantDTO update (@PathVariable Long id, @RequestBody MerchantDTO request)  {
+    public MerchantDTO update(@PathVariable Long id, @RequestBody MerchantDTO request) {
         Merchant merchant = merchantService.mapToEntity(request);
         Merchant result = merchantService.update(id, merchant);
         return merchantService.mapToDto(result);

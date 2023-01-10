@@ -18,6 +18,7 @@ import java.util.Optional;
 @Transactional
 public class MerchantServiceImpl implements MerchantService {
     private final MerchantRepository merchantRepository;
+    ObjectMapper mapper = new ObjectMapper();
 
     public MerchantServiceImpl(MerchantRepository merchantRepository) {
         this.merchantRepository = merchantRepository;
@@ -60,14 +61,11 @@ public class MerchantServiceImpl implements MerchantService {
         return merchantRepository.findAll(pageable);
     }
 
-
     @Override
     public Merchant findById(Long id) {
         Optional<Merchant> result = merchantRepository.findById(id);
         return result.orElse(null);
     }
-
-    ObjectMapper mapper = new ObjectMapper();
 
     @Override
     public MerchantDTO mapToDto(Merchant merchant) {
